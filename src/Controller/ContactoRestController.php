@@ -19,7 +19,7 @@ class ContactoRestController extends AbstractController
         $contactos = $this->getDoctrine()->getRepository(Contacto::class)->findAll();
         $converter = new \App\Converter\ContactoJsonConverter();
         return $this->json(array_map(function(Contacto $ontacto) use ($converter){
-                return $converter->contactToArray($ontacto);
+                return $converter->contactoToArray($ontacto);
             }, $contactos));
     }
     
@@ -29,7 +29,7 @@ class ContactoRestController extends AbstractController
         $em = $this->getDoctrine()->getManager();
         $em->persist($contacto);
         $em->flush();
-        return $this->json([]);
+        return $this->json($converter->contactoToArray($contacto));
     }
     
     public function editAction($contacto_id, \Symfony\Component\HttpFoundation\Request $request) {
@@ -39,7 +39,7 @@ class ContactoRestController extends AbstractController
             $converter->jsonUpdateContacto($contacto, $request->getContent());
             $em = $this->getDoctrine()->getManager();
             $em->flush();
-            return $this->json([]);
+            return $this->json($converter->contactoToArray($contacto));
         }else{
             return $this->json(["message"=>"Contacto inexistente"],500);
         }
@@ -52,7 +52,7 @@ class ContactoRestController extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $em->remove($contacto);
             $em->flush();
-            return $this->json([]);
+            return $this->json($converter->contactoToArray($contacto));
         }else{
             return $this->json(["message"=>"Contacto inexistente"],500);
         }

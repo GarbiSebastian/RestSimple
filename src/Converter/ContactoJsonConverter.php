@@ -8,12 +8,12 @@ namespace App\Converter;
  * @author sebastian
  */
 class ContactoJsonConverter {
-    public function contactToArray(\App\Entity\Contacto $contacto) {
+    public function contactoToArray(\App\Entity\Contacto $contacto) {
         return [
             'id' => $contacto->getId(),
             'nombre' => $contacto->getNombre(),
             'apellido' => $contacto->getApellido(),
-            'telefono' => $contacto->getTelefono(),
+//            'telefono' => $contacto->getTelefono(),
             'email' => $contacto->getEmail(),
             'createdAt' => $contacto->getCreatedAt()
         ];
@@ -30,7 +30,7 @@ class ContactoJsonConverter {
         $data = json_decode($json,true);
         $contacto->setNombre($data["nombre"])
                 ->setApellido($data["apellido"])
-                ->setTelefono($data["telefono"])
+//                ->setTelefono($data["telefono"])
                 ->setEmail($data["email"]);
         return $contacto;
     }

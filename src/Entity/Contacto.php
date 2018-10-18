@@ -27,11 +27,6 @@ class Contacto
     private $Apellido;
 
     /**
-     * @ORM\Column(type="string", length=50, nullable=true)
-     */
-    private $telefono;
-
-    /**
      * @ORM\Column(type="string", length=255)
      */
     private $email;
@@ -71,20 +66,6 @@ class Contacto
     public function setApellido($Apellido)
     {
         $this->Apellido = $Apellido;
-
-        return $this;
-    }
-
-//    public function getTelefono(): ?string
-    public function getTelefono()
-    {
-        return $this->telefono;
-    }
-
-//    public function setTelefono(?string $telefono): self
-    public function setTelefono($telefono)
-    {
-        $this->telefono = $telefono;
 
         return $this;
     }

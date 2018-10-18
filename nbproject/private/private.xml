@@ -3,15 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/sebastian/NetBeansProjects/pruebaRest4.0/config/routes.yaml</file>
-            <file>file:/home/sebastian/NetBeansProjects/pruebaRest4.0/src/Entity/.gitignore</file>
-            <file>file:/home/sebastian/NetBeansProjects/pruebaRest4.0/.env.dist</file>
-            <file>file:/home/sebastian/NetBeansProjects/pruebaRest4.0/src/Controller/ContactoRestController.php</file>
-            <file>file:/home/sebastian/NetBeansProjects/pruebaRest4.0/public/index.php</file>
-            <file>file:/home/sebastian/NetBeansProjects/pruebaRest4.0/src/Entity/Contacto.php</file>
-            <file>file:/home/sebastian/NetBeansProjects/pruebaRest4.0/.gitignore</file>
-            <file>file:/home/sebastian/NetBeansProjects/pruebaRest4.0/.env</file>
-            <file>file:/home/sebastian/NetBeansProjects/pruebaRest4.0/src/Converter/ContactoJsonConverter.php</file>
+            <file>file:/home/sgarbi/NetBeansProjects/RestSimple/.env</file>
         </group>
     </open-files>
 </project-private>
