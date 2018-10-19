@@ -32,6 +32,15 @@ class ContactoRestController extends AbstractController
         return $this->json($converter->contactoToArray($contacto));
     }
     
+    public function showAction($contacto_id, \Symfony\Component\HttpFoundation\Request $request) {
+        $contacto = $this->getDoctrine()->getRepository(Contacto::class)->find($contacto_id);
+        if($contacto){
+            $converter = new \App\Converter\ContactoJsonConverter();
+            return $this->json($converter->contactoToArray($contacto));
+        }else{
+            return $this->json(["message"=>"Contacto inexistente"],500);
+        }
+    }
     public function editAction($contacto_id, \Symfony\Component\HttpFoundation\Request $request) {
         $contacto = $this->getDoctrine()->getRepository(Contacto::class)->find($contacto_id);
         if($contacto){

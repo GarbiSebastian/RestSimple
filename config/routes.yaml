@@ -8,6 +8,11 @@ contacto_rest_new:
     controller: App\Controller\ContactoRestController::newAction
     methods: ["POST"]
     
+contacto_rest_show:
+    path: /contacto/rest/{contacto_id}
+    controller: App\Controller\ContactoRestController::showAction
+    methods: ["GET"]
+    
 contacto_rest_edit:
     path: /contacto/rest/{contacto_id}
     controller: App\Controller\ContactoRestController::editAction
